@@ -15,15 +15,16 @@ class NoneTest < Minitest::Test
   def test_double_negative
     numbers = [9, 3, 3, 7, 6, -5, 1]
     not_none_negative = numbers.none? do |number|
-      # Your code goes here
+      number < 0
     end
     refute not_none_negative
   end
 
   def test_none_are_negative
-    skip
     numbers = [9, 3, 1, 8, 3, 3, 5]
-    # Your code goes here
+    none_negative = numbers.none? do |number|
+      number < 0
+    end
     assert none_negative
   end
 
@@ -42,9 +43,10 @@ class NoneTest < Minitest::Test
   end
 
   def test_none_even
-    skip
     numbers = [3, 9, 15, 21, 19]
-    # Your code goes here
+    none_even = numbers.none? do |number|
+      number.even?
+    end
     assert none_even
   end
 

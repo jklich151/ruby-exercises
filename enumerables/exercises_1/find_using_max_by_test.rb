@@ -20,19 +20,18 @@ class FindUsingMaxByTest < Minitest::Test
     words = ["apple", "banana", "cherry", "date", "eggplant"]
 
     found_word = words.max_by do |word|
-      # write code here
-    end
+      word.
 
     assert_equal "date", found_word
   end
 
   # This one is missing the entire loop
   def test_array_with_the_most_items
-    skip
     arrays = [[:a, :b, :c], [1, 2, 3, 4, 5], ["zoo", :things, :stuff]]
 
-    # write code here
-
+    biggest_array = arrays.max_by do |array|
+      array.length
+    end
     assert_equal [1, 2, 3, 4, 5], biggest_array
   end
 
